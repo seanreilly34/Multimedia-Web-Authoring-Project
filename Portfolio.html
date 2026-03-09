@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  	<meta charset="UTF-8">
+	
+	<title>Sean Reilly Portfolio</title>
+	
+	<link rel="stylesheet" href="Portfolio-Style.css">
+
+</head>
+
+<body>
+
+<div class="ribbon">
+    
+
+    <h1>Sean Reilly Portfolio</h1>
+
+    <nav class="ribbon-links">
+        <a href="Main-Page.html">FavXI</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</div>
+
+<br><br>
+
+<center><h1>Digital Movie Processing</h1><center>
+
+  <div style="text-align:center">
+
+    <button onclick="playPause()">Play/Pause</button>
+    <button onclick="makeBig()">Big</button>
+    <button onclick="makeSmall()">Small</button>
+    <button onclick="makeNormal()">Normal</button>
+    <button onclick="forwardRewind(-2)">Rewind</button>
+    <button onclick="forwardRewind(2)">Forward</button>
+    <button onclick="toggleMute()">Mute</button>
+
+    <input
+      type="range"
+      min="0"
+      max="1"
+      step="0.01"
+      value="1"
+      oninput="setVolume(this.value)">
+
+    <br><br>
+
+    <video id="myVideo" width="620">
+      <source src="videos/JohnsVideoAssignment1.mp4" type="video/mp4">
+      <source src="videos/JohnsVideoAssignment1.ogg" type="video/ogg">
+      Your browser does not support HTML video.
+    </video>
+
+  </div>
+
+  <script>
+    var video = document.getElementById("myVideo");
+
+    function playPause() {
+      if (video.paused) {
+        video.play();
+      } else {
+        video.pause();
+      }
+    }
+
+    function makeBig() {
+      video.width = 920;
+    }
+
+    function makeSmall() {
+      video.width = 320;
+    }
+
+    function makeNormal() {
+      video.width = 620;
+    }
+
+    function forwardRewind(seconds) {
+      video.currentTime += seconds;
+    }
+
+    function toggleMute() {
+      video.muted = !video.muted;
+    }
+
+    function setVolume(value) {
+      video.volume = value;
+    }
+  </script>
+
+  <br><br><br><br>
+
+<center><h1>Image Processing</h1><center>
+
+	<div class="carousel">
+	 <div class="group">
+	  <div class="card"><img src="images/portfolio/image1.png" width="585" height="413" alt=""></div>
+	  <div class="card"><img src="images/portfolio/image2.png" width="585" height="413" alt=""></div>
+	  <div class="card"><img src="images/portfolio/image3.png" width="587" height="363" alt=""></div>
+	  <div class="card"><img src="images/portfolio/image4.png" width="311" height="441" alt=""></div>
+	  <div class="card"><img src="images/portfolio/image5.png" width="585" height="413" alt=""></div>
+	  <div class="card"><img src="images/portfolio/image6.png" width="311" height="441" alt=""></div>
+	 </div>
+	 <div aria-hidden class="group">
+	  <div class="card"><img src="images/portfolio/image1.png" width="585" height="413" alt=""></div>
+	  <div class="card"><img src="images/portfolio/image2.png" width="585" height="413" alt=""></div>
+	  <div class="card"><img src="images/portfolio/image3.png" width="587" height="363" alt=""></div>
+	  <div class="card"><img src="images/portfolio/image4.png" width="311" height="441" alt=""></div>
+	  <div class="card"><img src="images/portfolio/image5.png" width="585" height="413" alt=""></div>
+	  <div class="card"><img src="images/portfolio/image6.png" width="311" height="441" alt=""></div>
+	 </div>
+	</div>
+
+<br><br><br><br>
+
+  <center><img src="images/portfolio/samus.gif" width="200" height="178" alt=""><center>
+
+
+
+</body>
+</html>

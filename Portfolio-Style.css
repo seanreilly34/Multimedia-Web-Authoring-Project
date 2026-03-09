@@ -1,0 +1,149 @@
+
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: alegreya, sans-serif;
+	line-height: 1.6;
+	margin: 0;
+	padding:0;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+body {
+	background-image: url(images/main_page/HomeBG3.PNG);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+
+h1 {
+	font-family: Castelar;
+	color: #c9c8c3;
+	-webkit-text-stroke: 2px #eaecf1;
+	margin: 20px;
+	position: relative;
+	z-index: 10;
+	font-size: 50px;
+	
+}
+
+
+a img {
+    transition: transform 0.2s ease;
+}
+
+a img:hover {
+    transform: translate(-50%, -50%) scale(1.15) !important;
+}
+
+.ribbon {
+    width: 100%;
+    background: rgba(122, 121, 120, 0.85);
+    border-bottom: 2px solid #eaecf1;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 12px 20px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.logo {
+    height: 72px;
+}
+
+.ribbon h1 {
+    margin: 0;
+    font-family: Castelar;
+    color: #c9c8c3;
+    -webkit-text-stroke: 2px #eaecf1;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 2.9rem;
+}
+
+.ribbon-links a {
+    position: relative;
+    color: #c9c8c3;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    padding-bottom: 2px;
+}
+
+
+.ribbon-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 2px;
+    background-color: #eaecf1;
+
+    transition: width 0.3s ease;
+}
+
+
+.ribbon-links a:hover::after {
+    width: 100%;
+}
+
+.ribbon-links a {
+    transition: color 0.3s ease;
+}
+
+.ribbon-links a:hover {
+    color: #eaecf1;
+}
+
+.carousel {
+  margin: 20px auto;
+  width: 90%;
+  borderP: 5px solid red;
+  display: flex;
+  overflow-x: hidden;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.group{
+  display: flex;
+  min-width: max-content;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  animation: spin 30s linear infinite;
+  padding-right: 1em;
+}
+
+.card {
+  flex: 0 0 5em;
+  height 5em;
+  padding: 1em;
+  background: rgba(122, 121, 120, 0.55);
+  font-size: 3rem;
+  border-radius: .2em;
+  text-align: center;
+  align-content: center;
+}
+
+@keyframes spin {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+
+
